@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #0b1220, #101b2c);
+  color: #edf4ff;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.topbar {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(12, 18, 32, 0.95);
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  padding: 36px 0 24px;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a4b6d6;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.6rem;
+}
+
+p {
+  max-width: 760px;
+  color: #c7d4ef;
+  line-height: 1.6;
+}
+
+.hero-card {
+  background: rgba(19, 34, 55, 0.9);
+  border: 1px solid rgba(110, 168, 254, 0.25);
+  border-radius: 16px;
+  padding: 18px 20px;
+  max-width: 440px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: #a8bddb;
+  margin-bottom: 12px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin: 24px 0 30px;
+}
+
+.card {
+  background: rgba(19, 29, 46, 0.95);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.card.primary { border-color: rgba(110, 168, 254, 0.45); }
+.card.success { border-color: rgba(139, 233, 154, 0.45); }
+
+.value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.value.small {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.meta {
+  color: #d6e3ff;
+}
+
+.panel {
+  background: rgba(17, 27, 45, 0.92);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 20px 18px 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  vertical-align: top;
+}
+
+th {
+  color: #a4b6d6;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+ul {
+  padding-left: 18px;
+  line-height: 1.8;
+  color: #ebf3ff;
+}
+
+.stacked-list {
+  padding-left: 18px;
+}
+
+@media (max-width: 900px) {
+  .two-col { display: block; }
+  .two-col > .panel { margin-bottom: 20px; }
+}

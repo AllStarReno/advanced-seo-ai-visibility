@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ report.brand.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container header-row">
+        <div>
+          <div class="eyebrow">GEO / AEO / AI Visibility</div>
+          <h1>{{ report.brand.name }}</h1>
+          <p>{{ report.brand.tagline }}</p>
+        </div>
+        <div class="hero-card">
+          <div class="label">Positioning</div>
+          <div>{{ report.brand.positioning }}</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="cards-grid">
+        <div class="card primary">
+          <div class="label">Benchmark Leader</div>
+          <div class="value">{{ report.benchmark_summary.leader.system }}</div>
+          <div class="meta">{{ report.benchmark_summary.leader.score }}% accuracy</div>
+        </div>
+        <div class="card success">
+          <div class="label">Lowest Cost</div>
+          <div class="value">{{ report.benchmark_summary.lowest_cost.system }}</div>
+          <div class="meta">${{ '{:,.0f}'.format(report.benchmark_summary.lowest_cost.cost) }}</div>
+        </div>
+        <div class="card primary">
+          <div class="label">Best Value</div>
+          <div class="value">{{ report.benchmark_summary.best_value.system }}</div>
+          <div class="meta">{{ report.benchmark_summary.best_value.score }}% at ${{ '{:,.0f}'.format(report.benchmark_summary.best_value.cost) }}</div>
+        </div>
+        <div class="card success">
+          <div class="label">GRS Formula</div>
+          <div class="value small">ES × RR × SC × TV × CA × CP</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Leaderboard</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>System</th>
+              <th>Score</th>
+              <th>Cost</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in report.benchmark_summary.leader.get('by_score', []) %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ item.system }}</td>
+              <td>{{ item.score }}%</td>
+              <td>${{ '{:,.0f}'.format(item.cost) }}</td>
+              <td>{{ item.category }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+
+      <section class="two-col">
+        <div class="panel">
+          <h2>5-Layer GEO Framework</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Layer</th>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for layer in report.geo_framework.layers %}
+              <tr>
+                <td>{{ layer.layer }}</td>
+                <td>{{ layer.name }}</td>
+                <td>{{ layer.description }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel">
+          <h2>Authority Mapping</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Cluster</th>
+                <th>Score</th>
+                <th>Pages</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in report.website_cluster_authority %}
+              <tr>
+                <td>{{ item.cluster }}</td>
+                <td>{{ item.score }}</td>
+                <td>{{ item.pages|length }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <div class="panel">
+          <h2>FAQs</h2>
+          <ul>
+            {% for item in report.faqs %}
+            <li><strong>{{ item.question }}</strong><br>{{ item.answer }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Voice Snippets</h2>
+          <ul>
+            {% for snippet in report.voice_snippets %}
+            <li>{{ snippet }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Prompt Library</h2>
+        <ul class="stacked-list">
+          {% for name, value in report.prompt_library.items() %}
+          <li><strong>{{ name }}</strong>: {{ value }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

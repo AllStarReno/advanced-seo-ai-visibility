@@ -7,12 +7,18 @@ A benchmark-driven GEO / AEO / AI visibility platform designed around:
 - 5-layer GEO / LLM visibility framework integration
 - Markov-inspired content cluster analysis
 - reporting and SQL persistence
+- browser dashboard and API endpoints
 
 ## Quick start
 
 ```bash
 python -m advanced_seo_ai_visibility.cli --output advanced_seo_ai_visibility/output
+python -m advanced_seo_ai_visibility.app
 ```
+
+Then open:
+- http://localhost:5000/
+- http://localhost:5000/api/report
 
 ## Included modules
 
@@ -22,6 +28,8 @@ python -m advanced_seo_ai_visibility.cli --output advanced_seo_ai_visibility/out
 - GEO framework model and metrics
 - content-cluster authority logic
 - database-backed report snapshots
+- workflow automation and dashboard rendering
+- REST JSON reporting endpoint
 
 ## Main KPI formula
 
