@@ -1,0 +1,3 @@
+# Minimal dependencies
+
+# No third-party runtime dependencies required for the initial package.

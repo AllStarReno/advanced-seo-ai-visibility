@@ -1,0 +1,32 @@
+{
+  "framework_name": "ThatWare Hyper-Intelligence GEO Stack",
+  "version": "5-layer GEO + LLM visibility model",
+  "formula": "GRS = (ES × RR × SC × TV × CA × CP)",
+  "layers": [
+    {
+      "layer": 1,
+      "name": "Business Intelligence & Entity Engineering",
+      "description": "Defines the brand as a machine-readable entity with semantic clarity, prompt coverage, and entity confidence."
+    },
+    {
+      "layer": 2,
+      "name": "LLM Training & Entity Injection",
+      "description": "Reinforces entity recognition and recall across AI systems, RAG pipelines, and knowledge systems."
+    },
+    {
+      "layer": 3,
+      "name": "Website Architecture & Semantic Optimization",
+      "description": "Improves semantic structure, topic architecture, crawl clarity, and retrieval compatibility."
+    },
+    {
+      "layer": 4,
+      "name": "AI Protocol & Retrieval Optimization",
+      "description": "Creates machine-readable access and protocol signaled content, llms.txt, ai.txt, schema, and semantic feeds."
+    },
+    {
+      "layer": 5,
+      "name": "Citation Engineering & Conversational Authority",
+      "description": "Builds multi-platform trust, citations, expertise signals, and AI recommendation durability."
+    }
+  ]
+}

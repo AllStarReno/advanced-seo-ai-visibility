@@ -1,0 +1,28 @@
+{
+  "brand": {
+    "name": "Advanced SEO + AI Visibility",
+    "tagline": "Engineering authority flow, retrieval readiness, and AI citation dominance.",
+    "positioning": "A benchmark-driven engine for AI search visibility, GEO, AEO, semantic architecture, and authority engineering."
+  },
+  "benchmark_summary": {
+    "leader": {
+      "system": "Valyu DeepResearch (Heavy)",
+      "score": 72.7,
+      "cost": 2500,
+      "category": "leader"
+    },
+    "lowest_cost": {
+      "system": "Exa Deep Reasoning",
+      "score": 25.9,
+      "cost": 15,
+      "category": "budget"
+    },
+    "best_value": {
+      "system": "You.com Research (exhaustive)",
+      "score": 53.0,
+      "cost": 450,
+      "category": "value"
+    }
+  },
+  "report_generated_at": "2026-10-21"
+}
