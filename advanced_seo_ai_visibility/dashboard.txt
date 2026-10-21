@@ -1,0 +1,15 @@
+# Advanced SEO + AI Visibility Dashboard
+
+This file contains the dashboard generation utilities for the platform.
+
+It creates an HTML dashboard from the benchmark and GEO report, rendering:
+- leaderboard
+- benchmark summary
+- GEO layer table
+- authority scores
+- FAQ and snippets
+- prompt library
+
+Usage:
+    python -m advanced_seo_ai_visibility.workflow
+    open advanced_seo_ai_visibility/output/dashboard.html
